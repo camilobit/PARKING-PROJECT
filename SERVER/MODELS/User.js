@@ -1,3 +1,5 @@
+// este modelo hace referencia a los usuarios y tiene dos validaciones para usuarios de useradmin y superadmin
+
 import { DataTypes, UUID } from 'sequelize';
 
 export default (sequelize) => {
