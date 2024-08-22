@@ -1,3 +1,6 @@
+//este modelo nos muestra la hora de entrada del vehiculo la fecha de creación de este ticket
+// y la hora de salida del vehiculo puede o no ser nula, el monto que se pagó y se relaciona con
+// ticketId, userir userAdminId SuperAdminId y 
 import { DataTypes } from 'sequelize';
 
 export default (sequelize) => {
@@ -24,11 +27,7 @@ export default (sequelize) => {
         amount: {
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false,
-        },
-        validatedWith: {
-            type: DataTypes.ENUM('factura comercial', 'efectivo', 'gimnasio', 'mixto', 'exito', 'panamericana', 'homecentry', 'cine', 'hym', 'bodytech', 'smartfit'),
-            allowNull: true, // Puede ser nulo si no hay validación
-        },
+        }
     },
     { timestamps: true });
 };

@@ -1,3 +1,5 @@
+//almacenasmos la placa de un vehiculo al momento de hacer la consulta para guardar esta info y cruzarla con modelos tickes, user y demás.
+
 import { DataTypes } from 'sequelize';
 
 export default (sequelize) => {

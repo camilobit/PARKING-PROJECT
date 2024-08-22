@@ -1,3 +1,6 @@
+// Este modelo separa los roles del usuario (user, user_admin, superAdmin) para una gestión más flexible.
+//Campos clave: id, roleName, description.
+
 import { DataTypes } from 'sequelize';
 
 export default (sequelize) => {

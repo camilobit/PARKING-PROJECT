@@ -1,3 +1,7 @@
+//Registra acciones críticas realizadas en el sistema, como creación de usuarios, pagos, actualizaciones, y más. 
+//Esto es útil para un superAdmin que quiera revisar las acciones realizadas por los user_admin.
+//Campos clave: id, action, userId, targetId, targetType, createdAt.
+
 import { DataTypes } from 'sequelize';
 
 export default (sequelize) => {

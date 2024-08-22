@@ -1,3 +1,7 @@
+//Almacena métricas de desempeño de los user_admin, como la cantidad de pagos gestionados, el monto total cobrado, etc. 
+//Este modelo es útil para que los superAdmin revisen el rendimiento de los user_admin.
+//Campos clave: id, userAdminId, totalPayments, totalAmountCollected, createdAt, updatedAt.
+
 import { DataTypes } from 'sequelize';
 
 export default (sequelize) => {
