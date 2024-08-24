@@ -1,6 +1,6 @@
 import { DataTypes } from 'sequelize';
 
-export default (sequelize) => {
+const payment = (sequelize) => {
     sequelize.define('payment', {
         id: {
             type: DataTypes.UUID,
@@ -58,4 +58,7 @@ export default (sequelize) => {
         },
     },
     { timestamps: false }); // Usamos `timestamps: false` ya que `createdAt` ya está incluido
+    return payment;
+
 };
+export default payment;
