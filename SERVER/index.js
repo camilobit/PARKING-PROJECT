@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from 'express';
-import { sequelize } from './db.js'; // Asegúrate de exportar `sequelize` desde tu archivo `db.js`
+import { sequelize } from './db.js';
+
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -40,5 +41,7 @@ const startServer = async () => {
     console.error('Error al conectar a la base de datos:', error);
   }
 };
+
+
 
 startServer();

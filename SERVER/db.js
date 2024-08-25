@@ -8,7 +8,7 @@ import config from './config.js';
 dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-console.log(__dirname, 'ruta generada');
+//console.log(__dirname, 'ruta generada');
 
 // Configuración de Sequelize
 const sequelize = new Sequelize(
@@ -35,7 +35,7 @@ const loadModels = async () => {
   for (const file of files) {
     const filePath = pathToFileURL(join(__dirname, 'MODELS', file)).href; // Convierte a URL con file://
     const model = await import(filePath);
-    console.log('Modelo cargado:', model);
+    //console.log('Modelo cargado:', model);
     modelDefiners.push(model);
   }
 };
@@ -50,7 +50,7 @@ modelDefiners.forEach((model) => {
 
 const models = sequelize.models; // Asegurar que todos los modelos están cargados correctamente aquí
 
-console.log('Modelos cargados:', Object.keys(models)); // Revisa que todos los modelos estén cargados
+//console.log('Modelos cargados:', Object.keys(models)); // Revisa que todos los modelos estén cargados
 
 // Establece relaciones aquí después de cargar completamente los modelos
 models.user.belongsToMany(models.vehicle, {
