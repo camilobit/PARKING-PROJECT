@@ -4,7 +4,7 @@
 
 import { DataTypes } from 'sequelize';
 
-export default (sequelize) => {
+const performance = (sequelize) => {
     sequelize.define('performance', {
         id: {
             type: DataTypes.UUID,
@@ -37,4 +37,6 @@ export default (sequelize) => {
             defaultValue: DataTypes.NOW,
         },
     });
+    return performance;
 };
+export default performance;

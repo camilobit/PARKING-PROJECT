@@ -1,4 +1,6 @@
-export default (sequelize) => {
+import { DataTypes } from 'sequelize';
+
+const validationOption = (sequelize) => {
     sequelize.define('validationOption', {
         id: {
             type: DataTypes.UUID,
@@ -17,4 +19,6 @@ export default (sequelize) => {
         },
     },
         { timestamps: true });
+        return validationOption;
 };
+export default validationOption;

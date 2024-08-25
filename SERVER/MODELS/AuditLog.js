@@ -4,7 +4,7 @@
 
 import { DataTypes } from 'sequelize';
 
-export default (sequelize) => {
+const auditLog = (sequelize) => {
     sequelize.define('auditLog', {
         id: {
             type: DataTypes.UUID,
@@ -37,4 +37,6 @@ export default (sequelize) => {
             defaultValue: DataTypes.NOW,
         },
     });
+    return auditLog;
 };
+export default auditLog;

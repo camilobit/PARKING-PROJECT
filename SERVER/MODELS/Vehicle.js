@@ -2,7 +2,7 @@
 
 import { DataTypes } from 'sequelize';
 
-export default (sequelize) => {
+const vehicle = (sequelize) => {
     sequelize.define('vehicle', {
         id: {
             type: DataTypes.UUID,
@@ -21,4 +21,6 @@ export default (sequelize) => {
         },
     },
         { timestamps: true });
+        return vehicle;
 };
+export default vehicle;

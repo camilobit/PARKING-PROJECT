@@ -1,6 +1,6 @@
 import { DataTypes } from 'sequelize';
 
-export default (sequelize) => {
+const adminReport = (sequelize) => {
     sequelize.define('adminReport', {
         id: {
             type: DataTypes.UUID,
@@ -21,4 +21,6 @@ export default (sequelize) => {
             defaultValue: DataTypes.NOW,
         },
     });
+    return adminReport
 };
+export default adminReport;

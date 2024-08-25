@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { pool } from "../DATABASE/ConnectionPostgreSQL.js";
+import { pool } from "../../DATABASE/db.js";
 
 dotenv.config();
 

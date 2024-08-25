@@ -3,7 +3,7 @@
 // ticketId, userir userAdminId SuperAdminId y 
 import { DataTypes } from 'sequelize';
 
-export default (sequelize) => {
+const ticket = (sequelize) => {
     sequelize.define('ticket', {
         id: {
             type: DataTypes.UUID,
@@ -30,4 +30,6 @@ export default (sequelize) => {
         }
     },
     { timestamps: true });
+    return ticket;
 };
+export default ticket;

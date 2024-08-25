@@ -3,7 +3,7 @@
 
 import { DataTypes } from 'sequelize';
 
-export default (sequelize) => {
+const role = (sequelize) => {
     sequelize.define('role', {
         id: {
             type: DataTypes.UUID,
@@ -22,4 +22,6 @@ export default (sequelize) => {
         },
     },
     { timestamps: true });
+    return role;
 };
+export default role;
